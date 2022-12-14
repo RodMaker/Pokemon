@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Charmander
   m_EditorClassIdentifier: 
   name: Charmander
-  description: 
+  description: Obviously prefers hot places. When it rains, steam is said to spout
+    from the tip of its tail.
   frontSprite: {fileID: 21300000, guid: cd259d9d4f8ba2749a16d1cc64d46bec, type: 3}
   backSprite: {fileID: 21300000, guid: ed8e1d9976a1fd94d961840d8f6e7764, type: 3}
   type1: 2
@@ -24,3 +25,10 @@ MonoBehaviour:
   spAttack: 60
   spDefense: 50
   speed: 65
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: cca7f6fa9ef014b40af43f9d203d779f, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 0f34b77bfbe0ee245a4dd952b1b70eb9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 4e8674e2e7d813c4aa4248e35d4e6054, type: 2}
+    level: 9

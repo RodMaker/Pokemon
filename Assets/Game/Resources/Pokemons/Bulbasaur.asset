@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Bulbasaur
   m_EditorClassIdentifier: 
   name: Bulbasaur
-  description: 
+  description: "A strange seed was planted on its back at birth. The plant sprouts
+    and grows with this Pok\xE9mon."
   frontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
   backSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
   type1: 5
@@ -24,3 +25,12 @@ MonoBehaviour:
   spAttack: 65
   spDefense: 65
   speed: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 67d4c4687156a394f8dab9b4f7874b26, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 0f34b77bfbe0ee245a4dd952b1b70eb9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: fc6401222f59d82449bd7eb34ae82e56, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 6c06ed1cd0a179748acdc234c89d0f79, type: 2}
+    level: 13
