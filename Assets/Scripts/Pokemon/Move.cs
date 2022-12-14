@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Move
 {
+    /// <summary>
+    /// 
+    /// </summary>
+
     public MoveBase Base { get; set; }
     public int PP { get; set; }
 

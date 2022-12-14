@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     /// <summary>
-    /// Class responsible for the Player movement
+    /// Class responsible for the Player movement and collisions
     /// </summary>
     
     public float moveSpeed; // Player movement speed
