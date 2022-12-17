@@ -6,6 +6,10 @@ public enum GameState { FreeRoam, Battle }
 
 public class GameController : MonoBehaviour
 {
+    /// <summary>
+    /// Class responsible for changing between states (FreeRoam and Battle)
+    /// </summary>
+    
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
@@ -24,7 +28,10 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
-        battleSystem.StartBattle();
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        var wildPokemon = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildPokemon();
+
+        battleSystem.StartBattle(playerParty, wildPokemon);
     }
 
     void EndBattle(bool won)
