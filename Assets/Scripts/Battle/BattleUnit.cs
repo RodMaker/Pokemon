@@ -7,7 +7,7 @@ using DG.Tweening;
 public class BattleUnit : MonoBehaviour
 {
     /// <summary>
-    /// Class responsible for assigning the different sprites
+    /// Class responsible for assigning the different sprites and playing battle animations
     /// </summary>
 
     [SerializeField] PokemonBase _base;
@@ -34,6 +34,9 @@ public class BattleUnit : MonoBehaviour
             image.sprite = Pokemon.Base.BackSprite;
         else
             image.sprite = Pokemon.Base.FrontSprite;
+
+        image.color = originalColor;
+        PlayEnterAnimation();
     }
 
     public void PlayEnterAnimation()
