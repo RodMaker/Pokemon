@@ -19,3 +19,7 @@ MonoBehaviour:
   power: 45
   accuracy: 100
   pp: 25
+  category: 1
+  effects:
+    boosts: []
+  target: 0

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PartyScreen : MonoBehaviour
 {
+    /// <summary>
+    /// 
+    /// </summary>
+
     [SerializeField] Text messageText;
 
     PartyMemberUI[] memberSlots;

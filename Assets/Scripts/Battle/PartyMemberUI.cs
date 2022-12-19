@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PartyMemberUI : MonoBehaviour
 {
+    /// <summary>
+    /// 
+    /// </summary>
+
     [SerializeField] Text nameText;
     [SerializeField] Text levelText;
     [SerializeField] HPBar hpBar;
