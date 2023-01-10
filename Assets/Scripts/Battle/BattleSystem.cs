@@ -136,17 +136,38 @@ public class BattleSystem : MonoBehaviour
 
             CheckForBattleOver(targetUnit);
         }
+
+        // Statuses like burn or poison will hurt the pokemon after the turn
+        sourceUnit.Pokemon.OnAfterTurn();
+        yield return ShowStatusChanges(sourceUnit.Pokemon);
+        yield return sourceUnit.Hud.UpdateHP();
+        if (sourceUnit.Pokemon.HP <= 0)
+        {
+            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} fainted");
+            sourceUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+
+            CheckForBattleOver(sourceUnit);
+        }
     }
 
     IEnumerator RunMoveEffects(Move move, Pokemon source, Pokemon target)
     {
         var effects = move.Base.Effects;
+
+        // Stat Boosting
         if (move.Base.Effects.Boosts != null)
         {
             if (move.Base.Target == MoveTarget.Self)
                 source.ApplyBoosts(effects.Boosts);
             else
                 target.ApplyBoosts(effects.Boosts);
+        }
+
+        // Status Condition
+        if (effects.Status != ConditionID.none)
+        {
+            target.SetStatus(effects.Status);
         }
 
         yield return ShowStatusChanges(source);

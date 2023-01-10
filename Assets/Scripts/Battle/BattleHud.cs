@@ -26,6 +26,10 @@ public class BattleHud : MonoBehaviour
 
     public IEnumerator UpdateHP()
     {
-        yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHP);
+        if (_pokemon.HpChanged)
+        {
+            yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHP);
+            _pokemon.HpChanged = false;
+        }
     }
 }
