@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef66b62f34a879048a699223b0e2c945, type: 3}
+  m_Name: Pikachu
+  m_EditorClassIdentifier: 
+  name: Pikachu
+  description: "When several of these Pok\xE9mon gather, their electricity could
+    build and cause lightning storms."
+  frontSprite: {fileID: 21300000, guid: d88719549c9367041afdfe8b7595b732, type: 3}
+  backSprite: {fileID: 21300000, guid: 1ff277cde06b5af459f7e17a5d35977b, type: 3}
+  type1: 4
+  type2: 0
+  maxHP: 35
+  attack: 55
+  defense: 30
+  spAttack: 50
+  spDefense: 40
+  speed: 90
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 9130944e8b49944408e7140cdc390010, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 0f34b77bfbe0ee245a4dd952b1b70eb9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: a938e61927ff2ba4e83cdb213497ca97, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: 844b0f58e458b2645863924e30b93608, type: 2}
+    level: 8
